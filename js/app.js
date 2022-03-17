@@ -34,6 +34,9 @@ function getResult() {
   if (computerChoice === userChoice) {
     result = "It's a draw!";
   }
+  if (computerChoice === "scissors" && userChoice === "paper") {
+    result = "You lost!";
+  }
   if (computerChoice === "rock" && userChoice === "paper") {
     result = "You are the winner!";
   }
@@ -49,8 +52,8 @@ function getResult() {
   if (computerChoice === "scissors" && userChoice === "rock") {
     result = "You are the winner!";
   }
-  if (computerChoice === "paper" && userChoice === "paper") {
-    result = "You lost!";
-  }
+  // if (computerChoice === "paper" && userChoice === "paper") {
+  //   result = "It's a draw";
+  // }
   resultDisplay.innerHTML = result;
 }
